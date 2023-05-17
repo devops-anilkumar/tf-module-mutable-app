@@ -21,6 +21,6 @@ resource "aws_instance" "od" {
     subnet_id               = element(data.terraform_remote_state.vpc.outputs.PRIVATE_SUBNET_IDS, count.index)
 
   tags = {
-    Name = "${var.COMPONENT}-${var.ENV}"
+    Name = "${var.COMPONENT}-${var.ENV}-od"
   }
 }
