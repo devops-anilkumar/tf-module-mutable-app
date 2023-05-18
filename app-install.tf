@@ -1,4 +1,4 @@
-resource "null_resource" {
+resource "null_resource" "app" {
 count        = var.SPOT_INSTANCE_COUNT + var.OD_INSTANCE_COUNT
 
  #DECLEARING THE REMOTE PROVISIONER INSIDE THE RESOURCE 
