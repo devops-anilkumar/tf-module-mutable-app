@@ -12,7 +12,7 @@ count        = var.SPOT_INSTANCE_COUNT + var.OD_INSTANCE_COUNT
   }
     inline = [
      // "ansible-pull -U https://github.com/devops-anilkumar/ansible.git robot-pull.yml -e ENV=dev -e COMPONENT=mongodb"
-     "ansible-pull -U https://github.com/b53-clouddevops/ansible.git robot-pull.yml -e ENV=${var.ENV} -e COMPONENT=${var.COMPONENT} -e VERSION=${var.APP_VERSION}"
+     "ansible-pull -U https://github.com/b53-clouddevops/ansible.git robot-pull.yml -e ENV=${var.ENV} -e COMPONENT=${var.COMPONENT} -e APP_VERSION=${var.APP_VERSION}"
      
     ]
   }
