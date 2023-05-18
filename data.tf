@@ -24,3 +24,13 @@ data "aws_ami" "ami" {
   name_regex       = "Ami-with-Ansible-Installed"
   owners           = ["self"]
 }
+
+#FETCHING THE SECRETS FROM SECRET MANNAGER
+data "aws_secretsmanager_secret" "secrets" {
+  name = "roboshop/secrets"
+}
+
+
+data "aws_secretsmanager_secret_version" "secrets" {
+  secret_id = data.aws_secretsmanager_secret.secrets.id
+}
