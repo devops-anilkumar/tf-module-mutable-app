@@ -17,4 +17,3 @@ count        = var.SPOT_INSTANCE_COUNT + var.OD_INSTANCE_COUNT
     ]
   }
 }
-}
