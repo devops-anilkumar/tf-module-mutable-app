@@ -16,7 +16,7 @@ resource "aws_lb_target_group_attachment" "attach_instances" {
 
 // ADD A RULE INSIDE THE LISTENER
 resource "aws_lb_listener_rule" "app_rule" {
-  listener_arn = data.terraform_remote_state.vpc.outputs.PRIVATE_LISTENER_ARN
+  listener_arn = data.terraform_remote_state.alb.outputs.PRIVATE_LISTENER_ARN
   priority     = 100
 
   action {
