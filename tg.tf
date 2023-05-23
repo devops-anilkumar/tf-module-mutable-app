@@ -4,6 +4,15 @@ resource "aws_lb_target_group" "app" {
   port               = var.APP_PORT
   protocol           = "HTTP"
   vpc_id             = data.terraform_remote_state.vpc.outputs.VPC_ID
+
+    health_check {
+    interval            = 5
+    timeout             = 4
+    healthy_threshold   = 2
+    unhealthy_threshold = 3
+    path                = "/health"
+  }
+}
 }
 
 //ATTACH INSTANCES TO THE TARGET GROUP OF COMPONENT
