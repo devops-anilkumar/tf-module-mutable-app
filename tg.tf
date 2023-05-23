@@ -13,7 +13,7 @@ resource "aws_lb_target_group" "app" {
     path                = "/health"
   }
 }
-}
+
 
 //ATTACH INSTANCES TO THE TARGET GROUP OF COMPONENT
 resource "aws_lb_target_group_attachment" "attach_instances" {
